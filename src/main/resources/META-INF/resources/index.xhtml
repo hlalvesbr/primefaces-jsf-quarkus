@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3c.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+
+<h:head lang="pt-br">
+    <title>Primefaces + JSF + Quarkus</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta charset="UTF-8"/>
+</h:head>
+
+<h:body>
+    <f:view contentType="text/html; charset=UTF-8">
+        <h:form>
+            <p:inputText value="#{indexBean.name}" pt:placeholder="Your name"/><br/>
+            <p:commandButton value="Say Hello" action="#{indexBean.sayHello}" update="@form"/><br/>
+            <p:outputLabel value="#{indexBean.message}"/><br/>
+        </h:form>
+    </f:view>
+</h:body>
+</html>
